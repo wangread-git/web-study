@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd" default-autowire="byName">
+
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+
+    <bean id="helloMap" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="hello" value="world"/>
+            </map>
+        </constructor-arg>
+    </bean>
+    <!--<import resource="spring-config-dao-dbcp.xml"/>-->
+    <!--<import resource="spring-config-zookeeper.xml"/>-->
+    <!--<import resource="spring-config-redis.xml"/>-->
+</beans>

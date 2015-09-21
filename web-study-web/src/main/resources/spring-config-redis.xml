@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
+
+    <bean id="redisCluster" class="com.wangread.webstudy.service.redis.RedisCluster">
+        <property name="sentinels">
+            <set>
+                <value>192.168.23.167:26379</value>
+                <value>192.168.23.167.26380</value>
+            </set>
+        </property>
+    </bean>
+
+</beans>
